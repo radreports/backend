@@ -1,0 +1,14 @@
+title This is a title
+
+participant UI
+participant API
+participant db
+participant Orthanc
+participant Workflow
+
+UI->API:Upload DICOM
+API->db : create Studies
+API ->Orthanc : Upload DICOM Images
+API ->Workflow : publish study
+Workflow -> API :Update Studies with result
+API -> UI : Send SSE

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+
+kind: Deployment
+metadata:
+  name: pacs-api-deployment
+  namespace: deepmd-pacs
+spec:
+  selector:
+    matchLabels:
+      app: pacs-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pacs-api
+    spec:
+      
+
+      containers:
+      - name: pacs-api
+      
+        image: anilyerramasu/pacs-api-python
+        
+        ports:
+          - containerPort: 8042
+        imagePullPolicy: Always
+        
+        
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pacs-api-service
+  namespace: deepmd-pacs
+spec:
+  ports:
+  - port: 5000
+    targetPort: 8042
+    name: http
+  selector:
+    app: pacs-api

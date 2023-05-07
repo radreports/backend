@@ -1,0 +1,27 @@
+alembic
+Authlib
+fastapi
+celery
+redis
+httpx
+ipython
+itsdangerous
+Jinja2==2.11.3
+psycopg2
+# pytest==6.1.0
+requests
+SQLAlchemy
+uvicorn
+passlib
+bcrypt
+sqlalchemy-utils
+python-multipart
+pyjwt
+pydicom
+sse-starlette
+fhir.resources
+python-jose[cryptography]
+apiron
+pydantic
+fhirclient
+

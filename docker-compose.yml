@@ -1,0 +1,7 @@
+version: "3"
+services:
+  pacs-api:
+    image: anilyerramasu/pacs-api-telrad
+    ports:
+      - 8888:8042
+  
