@@ -1,0 +1,601 @@
+{
+  "resourceType": "Bundle",
+  "id": "195f1a28-2af6-48a1-a2f4-8f0c0b2626b7",
+  "meta": {
+    "lastUpdated": "2023-05-10T10:22:10.006+00:00"
+  },
+  "type": "searchset",
+  "total": 22,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner?_format=json"
+  }, {
+    "relation": "next",
+    "url": "http://localhost:8080/hapi-fhir-jpaserver/fhir?_getpages=195f1a28-2af6-48a1-a2f4-8f0c0b2626b7&_getpagesoffset=20&_count=20&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/2",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "2",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-25T20:47:58.818+00:00",
+        "source": "#VxrLFiDSdLTnnkAB"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jim </b> male, DoB: 1974-12-25 ( Medical record number: 12345 (use: USUAL, period: 2001-05-06 --&gt; (ongoing)))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt Names:</td><td colspan=\"3\"><ul><li>Peter James Chalmers (OFFICIAL)</li><li>Peter James Windsor (MAIDEN)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li>-unknown-(HOME)</li><li>ph: (03) 5555 6473(WORK)</li><li>ph: (03) 3410 5613(MOBILE)</li><li>ph: (03) 5555 8834(OLD)</li><li>534 Erewhon St PeasantVille, Rainbow, Vic  3999(HOME)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>Bénédicte du Marché  (female)</li><li>534 Erewhon St PleasantVille Vic 3999 (HOME)</li><li><a href=\"tel:+33(237)998327\">+33 (237) 998327</a></li><li>Valid Period: 2012 --&gt; (ongoing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Managing Organization: <a href=\"organization-example-gastro.html\">Organization/1</a> &quot;Gastroenterology&quot;</li></ul></td></tr></table></div>"
+      },
+      "identifier": [ {
+        "use": "usual",
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "urn:oid:1.2.36.146.595.217.0.1",
+        "value": "12345",
+        "period": {
+          "start": "2001-05-06"
+        },
+        "assigner": {
+          "display": "Acme Healthcare"
+        }
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "Chalmers",
+        "given": [ "Peter", "James" ]
+      }, {
+        "use": "usual",
+        "given": [ "Jim" ]
+      }, {
+        "use": "maiden",
+        "family": "Windsor",
+        "given": [ "Peter", "James" ],
+        "period": {
+          "end": "2002"
+        }
+      } ],
+      "telecom": [ {
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 6473",
+        "use": "work",
+        "rank": 1
+      }, {
+        "system": "phone",
+        "value": "(03) 3410 5613",
+        "use": "mobile",
+        "rank": 2
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 8834",
+        "use": "old",
+        "period": {
+          "end": "2014"
+        }
+      } ],
+      "address": [ {
+        "use": "home",
+        "type": "both",
+        "text": "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+        "line": [ "534 Erewhon St" ],
+        "city": "PleasantVille",
+        "district": "Rainbow",
+        "state": "Vic",
+        "postalCode": "3999",
+        "period": {
+          "start": "1974-12-25"
+        }
+      } ],
+      "gender": "male",
+      "birthDate": "1974-12-25",
+      "_birthDate": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+          "valueDateTime": "1974-12-25T14:35:45-05:00"
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/12",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "12",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T07:32:05.533+00:00",
+        "source": "#CjRRyYzsQjAKsHi1"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "Peter",
+        "given": [ "Pan", "test3" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "201-222-1234"
+      }, {
+        "system": "email",
+        "value": "sss"
+      } ],
+      "birthDate": "2023-04-24T18:30:00.000Z"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/13",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "13",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T07:50:16.816+00:00",
+        "source": "#AmDspp4s3WrnHu1n"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "22",
+        "given": [ "44", "11" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "434"
+      }, {
+        "system": "email",
+        "value": "121"
+      } ],
+      "birthDate": "2023-04-24T18:30:00.000Z"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/14",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "14",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T07:52:37.516+00:00",
+        "source": "#0tkrGCdrS5sr0jSh"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "121",
+        "given": [ "44", "121" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "433"
+      }, {
+        "system": "email",
+        "value": "212"
+      } ],
+      "birthDate": "2023-04-24T18:30:00.000Z"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/15",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "15",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T07:56:25.051+00:00",
+        "source": "#th5eAbOvD92m0GpL"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "232",
+        "given": [ "23", "232" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "232"
+      }, {
+        "system": "email",
+        "value": "3333"
+      } ],
+      "birthDate": "2023-04-24T18:30:00.000Z"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/19",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "19",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T09:55:03.972+00:00",
+        "source": "#RDRDdc83lZkxZ8TX"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "jsar3004@gmail.com"
+      } ],
+      "birthDate": "2023-04-23T18:30:00.000Z"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/24",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "24",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T11:43:28.577+00:00",
+        "source": "#tznkNWyjVrkYOLaB"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "ashesh",
+        "given": [ "abhinav" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "1231231"
+      }, {
+        "system": "email",
+        "value": "test@gmail.com"
+      } ],
+      "birthDate": "2023-04-18T18:30:00.000Z"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/27",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "27",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:04:41.570+00:00",
+        "source": "#IJR8S4cWDwwjDywK"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "34334",
+        "given": [ "232" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "23"
+      }, {
+        "system": "email",
+        "value": "11"
+      } ],
+      "birthDate": "2023-04-24T18:30:00.000Z"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/28",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "28",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:02.361+00:00",
+        "source": "#sBLHIC5qdnGua3hO"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/29",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "29",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:06.093+00:00",
+        "source": "#JV4T7l1uvq6vacPq"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/30",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "30",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:06.271+00:00",
+        "source": "#Iy5HJzXzq7jLWpRx"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/31",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "31",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:06.436+00:00",
+        "source": "#VEUbYcBaD1tldXvN"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/32",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "32",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:10.689+00:00",
+        "source": "#4A57SJCYeTDeFw7R"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/33",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "33",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:10.824+00:00",
+        "source": "#LXKnrc5GoHWSeMua"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/34",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "34",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:16.429+00:00",
+        "source": "#RRxRmVUNl3LVoXRt"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/35",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "35",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:30.752+00:00",
+        "source": "#vbjXWroFdpP51JgR"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/36",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "36",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:21:31.332+00:00",
+        "source": "#Ah7RJWDr901tXsmv"
+      },
+      "name": [ {
+        "use": "official",
+        "family": "singh",
+        "given": [ "jaspreet" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "07860974856"
+      }, {
+        "system": "email",
+        "value": "sd"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/37",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "37",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:24:47.700+00:00",
+        "source": "#hHG7w8y2oBaATNGd"
+      },
+      "name": [ {
+        "use": "official",
+        "given": [ "433" ]
+      } ],
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/38",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "38",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:24:55.433+00:00",
+        "source": "#wqmsza43UT7vtgbT"
+      },
+      "name": [ {
+        "use": "official",
+        "given": [ "433" ]
+      } ],
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Practitioner/39",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "39",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-26T12:25:13.476+00:00",
+        "source": "#pp281ZQnR6slJCa2"
+      },
+      "name": [ {
+        "use": "official",
+        "given": [ "232" ]
+      } ],
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

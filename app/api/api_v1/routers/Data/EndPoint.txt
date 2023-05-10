@@ -1,0 +1,40 @@
+{
+  "resourceType": "Bundle",
+  "id": "41038d92-e666-43f2-87d7-af401e4c6bef",
+  "meta": {
+    "lastUpdated": "2023-05-10T10:24:16.823+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Endpoint?_format=json"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://localhost:8080/hapi-fhir-jpaserver/fhir/Endpoint/43",
+    "resource": {
+      "resourceType": "Endpoint",
+      "id": "43",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-27T18:11:33.842+00:00",
+        "source": "#gEiLVOs9tK4Ubzqi"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\tHealth Intersections CarePlan Hub<br/>\n\t\t\tCarePlans can be uploaded to/from this loccation\n\t\t</div>"
+      },
+      "identifier": [ {
+        "system": "http://pacs.radreports.ai",
+        "value": "epcp12"
+      } ],
+      "status": "active",
+      "name": "Health Intersections CarePlan Hub",
+      "address": "http://fhir3.healthintersections.com.au/open/CarePlan",
+      "header": [ "bearer-code BASGS534s4" ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

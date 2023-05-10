@@ -369,7 +369,7 @@ async def uploadFiles(files,ServiceRequest_id):
         print("Exception::",str(e))
     
     end_point = {
-        "reference": "Endpoint/43"
+        "reference": "Endpoint/1"
         }
     reference = ref.FHIRReference(end_point)
     imaging_study.endpoint = [reference]
@@ -402,6 +402,10 @@ async def uploadFiles(files,ServiceRequest_id):
 #     # imaging_study.series = ""
     print(imaging_study.as_json())
     response = set_ImagingStudy(imaging_study.as_json())
+    print(response)
+    im_resp = imaging_s.ImagingStudy(response)
+    im_resp = im_resp.id
+    im_resp = im_resp
     # print(response)
     # print(structure_report)
     Task = ""
@@ -423,9 +427,9 @@ async def uploadFiles(files,ServiceRequest_id):
         "Task": Task,
         "pacs_url": OrthancURL,
         "api_url": apiURL,
-        "study_id": ParentStudy,
+        "study_id": im_resp,
         "Series": Series,
-        "ImagingStudy":response['id'],
+        "ImagingStudy":im_resp,
         "patient_id": subject["reference"],
         "service_id": ServiceRequest_id
     }
