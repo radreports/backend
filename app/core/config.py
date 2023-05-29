@@ -30,10 +30,10 @@ class Settings():
 
     # ORTHANC_URL = "http://pacs.radreports.ai"
     ORTHANC_URL = "http://35.202.115.123:8042"
-    FHIR_URL = "http://ehr.radreports.ai/hapi-fhir-jpaserver/fhir"
+    FHIR_URL = "https://ehr.radreports.ai/hapi-fhir-jpaserver/fhir"
     # API_URL = "http://ehr.iradreports.com/hapi-fhir-jpaserver/fhir"
     # API_URL = "http://localhost:8888/api/v1"
-    API_URL = "http://api.radreports.ai/api/v1"
+    API_URL = "https://api.radreports.ai/api/v1"
     REDIS_HOST = "35.202.115.123"
     REDIS_PORT = 6379
     REDIS_PASSWORD = "m0nday"
