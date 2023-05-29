@@ -25,10 +25,11 @@ fhirURL = config.Settings.FHIR_URL
 
 OrthancURL = config.Settings.ORTHANC_URL
 apiURL = config.Settings.API_URL
+fhir_url = config.Settings.FHIR_URL
 redis_url = config.Settings.REDIS_HOST
 orthanc = Orthanc(OrthancURL)
 settings = {
-    'app_id': 'my_web_app',
+    'app_id': None,
     'api_base': fhirURL
 }
 smart = client.FHIRClient(settings=settings)
@@ -46,6 +47,11 @@ def get_patient_id(patient_id: str):
     res = json.loads(response2.text)
     return res
 
+def get_patient_name(patient_id: str):
+    response2 =  requests.get(fhirURL+"/Patient/"+patient_id)
+    #  p.Patient.read('Patient/?expand=true', smart.server)
+    res = json.loads(response2.text)
+    return res
 
 def set_Patient(request: Request):
     
@@ -145,8 +151,13 @@ def put_service_request_id(service_request_id: str):
 
 def getDiagnosticReports(response: Response):
     print("")
+    # fhirclient.
+    d_report.DiagnosticReport.read_from( smart.server)
+    # report = d_report.DiagnosticReport.read(None, smart.server)
+    # smart.request("/DiagnosticReport")
+    # search = search.include('subject')
     #  http://localhost:8080/hapi-fhir-jpaserver/fhir/DiagnosticReport?_pretty=true
-    response2 =  requests.get(fhirURL+"/fhir/DiagnosticReport?_pretty=true")
+    response2 =  requests.get(fhirURL+"/DiagnosticReport?_pretty=true")
     res = json.loads(response2.text)
     print(res)
     return res
@@ -420,6 +431,8 @@ async def uploadFiles(files,ServiceRequest_id):
     
     if body_site_code == "93870000":
         Task = "liver"
+    if body_site_code == "275978004":
+        Task = "colon"
     
    
     red = redis.StrictRedis(redis_url,6379,password="m0bdat",charset="utf-8",decode_responses=True)
@@ -427,6 +440,7 @@ async def uploadFiles(files,ServiceRequest_id):
         "Task": Task,
         "pacs_url": OrthancURL,
         "api_url": apiURL,
+        "ehr_url": fhir_url,
         "study_id": im_resp,
         "Series": Series,
         "ImagingStudy":im_resp,

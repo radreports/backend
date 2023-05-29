@@ -25,19 +25,19 @@ practitioner = {
     "active" : true,
     "name" : [{
       "use" : "official",
-      "family" : "Chalmers",
-      "given" : ["Peter",
-      "James"]
+      "family" : "Reddy",
+      "given" : ["Vinod",
+      "Vinod"]
     },
     {
       "use" : "usual",
-      "given" : ["Jim"]
+      "given" : ["Vinod"]
     },
     {
       "use" : "maiden",
-      "family" : "Windsor",
-      "given" : ["Peter",
-      "James"],
+      "family" : "Reddy",
+      "given" : ["Vinod",
+      "Vinod"],
       "period" : {
         "end" : "2002"
       }

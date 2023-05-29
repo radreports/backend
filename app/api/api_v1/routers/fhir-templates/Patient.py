@@ -25,19 +25,18 @@ p = {
     "active" : true,
     "name" : [{
       "use" : "official",
-      "family" : "Chalmers",
-      "given" : ["Peter",
-      "James"]
+      "family" : "Kumar",
+      "given" : ["Venkatesh",
+      "Venkatesh"]
     },
     {
       "use" : "usual",
-      "given" : ["Jim"]
+      "given" : ["Venkatesh"]
     },
     {
       "use" : "maiden",
-      "family" : "Windsor",
-      "given" : ["Peter",
-      "James"],
+      "family" : "Kumar",
+      "given" : ["Venkatesh","Venkatesh"],
       "period" : {
         "end" : "2002"
       }

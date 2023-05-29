@@ -24,4 +24,5 @@ python-jose[cryptography]
 apiron
 pydantic
 fhirclient
+firebase-admin
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "489104179920",
+    "project_id": "radreports-b6f17",
+    "storage_bucket": "radreports-b6f17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489104179920:android:8a1c98e2175eb4da01d4d5",
+        "android_client_info": {
+          "package_name": "com.aeologic.rest_api_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM62YbdGUKWviQGQyb9Oaf11h3QZQR0xM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
