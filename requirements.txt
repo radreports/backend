@@ -7,7 +7,8 @@ httpx
 ipython
 itsdangerous
 Jinja2==2.11.3
-psycopg2
+# psycopg2
+psycopg2-binary
 # pytest==6.1.0
 requests
 SQLAlchemy
