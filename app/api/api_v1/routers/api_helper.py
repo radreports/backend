@@ -447,7 +447,8 @@ async def uploadFiles(files,ServiceRequest_id):
         "Series": Series,
         "ImagingStudy":im_resp,
         "patient_id": subject["reference"],
-        "service_id": ServiceRequest_id
+        "service_id": ServiceRequest_id,
+        "ParentStudy": ParentStudy,
     }
     print("Task info ::",res)
     red.publish("test",json.dumps(res))
