@@ -34,7 +34,7 @@ class Settings():
     # API_URL = "http://ehr.iradreports.com/hapi-fhir-jpaserver/fhir"
     # API_URL = "http://localhost:8888/api/v1"
     API_URL = "https://api.radassist.ai/api/v1"
-    REDIS_HOST = "35.202.115.123"
+    REDIS_HOST = "34.170.63.108"
     REDIS_PORT = 6379
     REDIS_PASSWORD = "m0nday"
     

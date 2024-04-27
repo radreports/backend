@@ -380,7 +380,7 @@ async def uploadFiles(files,ServiceRequest_id):
         print("Exception::",str(e))
     
     end_point = {
-        "reference": "Endpoint/1"
+        "reference": "Endpoint/8"
         }
     reference = ref.FHIRReference(end_point)
     imaging_study.endpoint = [reference]
