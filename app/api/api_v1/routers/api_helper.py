@@ -212,6 +212,7 @@ async def uploadFiles(files,ServiceRequest_id):
 
     # print(response)
     study = json.loads(response)
+    print("orthanic response after image upload::",study)
     # Series = study["Series"]
     ParentPatient = study["ParentPatient"]
     
@@ -414,7 +415,7 @@ async def uploadFiles(files,ServiceRequest_id):
 #     # imaging_study.series = ""
     print(imaging_study.as_json())
     response = set_ImagingStudy(imaging_study.as_json())
-    print(response)
+    # print(response)
     im_resp = imaging_s.ImagingStudy(response)
     im_resp = im_resp.id
     im_resp = im_resp
