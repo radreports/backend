@@ -28,12 +28,12 @@ class Settings():
     PROJECT_NAME = "DeepOncology"
     API_V1_STR = "/api/v1"
 
-    # ORTHANC_URL = "http://pacs.radreports.ai"
-    ORTHANC_URL = "http://35.202.115.123:8042"
-    FHIR_URL = "https://ehr.radreports.ai/hapi-fhir-jpaserver/fhir"
+    ORTHANC_URL = "https://pacs.radassist.ai"
+    # ORTHANC_URL = "http://35.202.115.123:8042"
+    FHIR_URL = "https://ehr.radassist.ai/hapi-fhir-jpaserver/fhir"
     # API_URL = "http://ehr.iradreports.com/hapi-fhir-jpaserver/fhir"
     # API_URL = "http://localhost:8888/api/v1"
-    API_URL = "https://api.radreports.ai/api/v1"
+    API_URL = "https://api.radassist.ai/api/v1"
     REDIS_HOST = "35.202.115.123"
     REDIS_PORT = 6379
     REDIS_PASSWORD = "m0nday"

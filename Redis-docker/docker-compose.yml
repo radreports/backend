@@ -5,7 +5,7 @@ services:
     restart: always
     ports:
       - '6379:6379'
-    command: redis-server --save 20 1 --loglevel warning --requirepass m0bdat
+    command: redis-server --save 20 1 --loglevel warning --requirepass m0nday
     volumes: 
       - cache:/data
 volumes:
