@@ -130,6 +130,7 @@ def get_ServiceRequest():
 
 
 def get_service_request_id(service_request_id: str):
+    print("service_request_id::",service_request_id)
     response2 =  requests.get(fhirURL+"/ServiceRequest/"+service_request_id)
     #  p.Patient.read('Patient/?expand=true', smart.server)
     res = json.loads(response2.text)
