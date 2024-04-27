@@ -126,7 +126,7 @@ async def get_imaginstudy_id(id: str):
     return helper.get_imaginstudy_id(id)
 
 @r.post("/ImagingStudy/upload")
-async def upload_files(files: List[UploadFile],response: Response,ServiceRequest_id:Union[str, None] = Header(default=None, convert_underscores=False)):
+async def upload_files(files: List[UploadFile],response: Response,ServiceRequest_id:Union[str, "12"] = Header(default=None, convert_underscores=False)):
     print("Starting backgoung task ...",ServiceRequest_id)
     # userID = "test"
     # background_tasks.add_task(doWorkFlow,files,ServiceRequest_id)
