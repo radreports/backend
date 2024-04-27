@@ -436,7 +436,7 @@ async def uploadFiles(files,ServiceRequest_id):
         Task = "colon"
     
    
-    red = redis.StrictRedis(redis_url,6379,password="m0bdat",charset="utf-8",decode_responses=True)
+    red = redis.StrictRedis(redis_url,6379,password="m0nday",charset="utf-8",decode_responses=True)
     res = {
         "Task": Task,
         "pacs_url": OrthancURL,
