@@ -125,11 +125,12 @@ async def getImagingStudy():
 async def get_imaginstudy_id(id: str):
     return helper.get_imaginstudy_id(id)
 
-@r.post("/ImagingStudy/upload")
-async def upload_files(files: List[UploadFile],response: Response,ServiceRequest_id:Union[str, None] = Header(default=None, convert_underscores=False)):
+@r.post("/ImagingStudy/upload/{service_id}")
+async def upload_files(files: List[UploadFile],response: Response,service_id:str,ServiceRequest_id:Union[str, None] = Header(default=None, convert_underscores=False)):
     print("Starting backgoung task ...",ServiceRequest_id)
+    print("service_ID is ::",service_id)
     if ServiceRequest_id is None:
-        ServiceRequest_id = "12"
+        ServiceRequest_id = service_id
     
     print("set service id because it's none ...",ServiceRequest_id)
     # userID = "test"
