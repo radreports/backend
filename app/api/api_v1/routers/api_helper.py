@@ -430,6 +430,8 @@ async def uploadFiles(files,ServiceRequest_id):
         Task = "thor"
     if body_site_code == "Abdoman":
         Task = "Abdoman"
+    if body_site_code == "totalseg":
+        Task = "totalseg"
     
     if body_site_code == "93870000":
         Task = "liver"
