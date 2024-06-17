@@ -437,6 +437,10 @@ async def uploadFiles(files,ServiceRequest_id):
         Task = "liver"
     if body_site_code == "275978004":
         Task = "colon"
+    if body_site_code == "432634008":
+        Task = "breast_mri"
+
+    # 432634008
     
    
     red = redis.StrictRedis(redis_url,6379,password="m0nday",charset="utf-8",decode_responses=True)
