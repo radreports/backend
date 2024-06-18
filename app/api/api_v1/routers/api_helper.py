@@ -440,6 +440,9 @@ async def uploadFiles(files,ServiceRequest_id):
     if body_site_code == "432634008":
         Task = "breast_mri"
 
+    # breast_fibro
+    if body_site_code == "breast_fibro":
+        Task = "breast_fibro"
     # 432634008
     
    
