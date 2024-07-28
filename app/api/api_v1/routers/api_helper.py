@@ -196,6 +196,22 @@ def get_imaginstudy_id(id):
     res = json.loads(response2.text)
     return res
 
+def get_task(body_site_code):
+    task_map = {
+        "27410004": "ich",
+        "786838002": "lung",
+        "thor": "thor",
+        "Abdoman": "Abdoman",
+        "totalseg": "totalseg",
+        "93870000": "liver",
+        "275978004": "colon",
+        "432634008": "breast_mri",
+        "breast_fibro": "breast_fibro"
+    }
+
+    # Default to using the body_site_code if it doesn't match any key
+    return task_map.get(body_site_code, body_site_code)
+
 
 async def uploadFiles(files,ServiceRequest_id):
     print("uploading files for task  .....",ServiceRequest_id)
@@ -445,6 +461,9 @@ async def uploadFiles(files,ServiceRequest_id):
         Task = "breast_fibro"
     # 432634008
     
+    
+    Task = body_site_code
+
    
     red = redis.StrictRedis(redis_url,6379,password="m0nday",charset="utf-8",decode_responses=True)
     res = {
