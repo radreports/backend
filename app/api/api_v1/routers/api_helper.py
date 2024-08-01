@@ -11,9 +11,10 @@ from  fhirclient.models.imagingstudy import ImagingStudySeries as StudySeries
 # import fhirclient.models.reference as ref
 import fhirclient.models.fhirreference as ref
 import fhirclient.models.fhirdate as fhir_date
+from fhirclient.models.fhirdate import FHIRDate
 import fhirclient.models.annotation as fhir_annotation
 import fhirclient.models.coding as coding
-from datetime import datetime
+from datetime import datetime, timezone
 from fhirclient import client
 
 import fhirclient.models.humanname as hn
@@ -375,8 +376,18 @@ async def uploadFiles(files,ServiceRequest_id):
 
 
     imaging_study.subject = reference
-    now = datetime.now() # current date and time
-    fhir_date2 = fhir_date.FHIRDate(now.strftime("%m/%d/%Y, %H:%M:%S"))
+    # now = datetime.now() # current date and time
+    # fhir_date2 = fhir_date.FHIRDate(now.strftime("%m/%d/%Y, %H:%M:%S"))
+
+    now = datetime.now(timezone.utc)
+
+# Format the date in ISO 8601 format
+    # iso_format_date = now.strftime("%Y-%m-%dT%H:%M:%S")
+
+    # Create the FHIRDate object
+    iso_format_date = now.isoformat()
+    # fhir_date2 = fhir_date.FHIRDate(iso_format_date)
+    fhir_date2 = None
     # imaging_study.started =  fhir_date2
     basedOn = {
       "reference": "ServiceRequest/"+ ServiceRequest_id
@@ -461,7 +472,7 @@ async def uploadFiles(files,ServiceRequest_id):
         Task = "breast_fibro"
     # 432634008
     
-    
+
     Task = body_site_code
 
    
